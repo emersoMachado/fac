@@ -1,0 +1,9 @@
+.vscode
+# Ignorar arquivos binários do C
+*.o        # Arquivos objeto (.o)
+*.out      # Arquivos executáveis no Linux/macOS
+*.exe      # Executáveis no Windows
+*.a        # Arquivos de biblioteca estática
+*.so       # Bibliotecas compartilhadas no Linux
+*.dll      # Bibliotecas dinâmicas no Windows
+*.dSYM/    # Diretórios de debug do macOS
