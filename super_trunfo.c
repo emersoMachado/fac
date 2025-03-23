@@ -76,6 +76,8 @@ int main() {
   printf("Área: %2f km²\n", cards[i].area_in_square_kilometers);
   printf("PIB: %2f\n", cards[i].pib);
   printf("Número de Pontos Turísticos: %d\n", cards[i].number_tourist_attractions);
+  printf("Densidade Populacional: %2f hab/km²\n", cards[i].population / cards[i].area_in_square_kilometers);
+  printf("PIB per Capita: %2f reais\n", cards[i].pib / cards[i].population);
 
   i++;
   printf("\n--- Carta %d ---\n", i + 1);
@@ -86,6 +88,8 @@ int main() {
   printf("Área: %2f km²\n", cards[i].area_in_square_kilometers);
   printf("PIB: %2f\n", cards[i].pib);
   printf("Número de Pontos Turísticos: %d\n", cards[i].number_tourist_attractions);
-
+  printf("Densidade Populacional: %2f hab/km²\n", cards[i].population / cards[i].area_in_square_kilometers);
+  printf("PIB per Capita: %2f reais\n", cards[i].pib / cards[i].population);
+  
   return 0;
 }
