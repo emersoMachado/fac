@@ -138,5 +138,13 @@ int main() {
   int first_card_win_super_power = cards[0].super_power > cards[1].super_power; 
   printf("Super poder: Carta %d venceu (%d)\n", ((first_card_win_super_power == 0) ? 2 : 1), first_card_win_super_power);
   
+  printf("\n---  Comparação de Cartas (Atributo: População): ---\n");
+
+  printf("Carta 1 - %s: %lu$\n", cards[0].city, cards[0].population);
+
+  printf("Carta 2 - %s: %lu$\n", cards[1].city, cards[1].population);
+
+  printf("Resultado: Carta %d (%s) venceu! \n", ((first_card_win_population == 0) ? 2 : 1), cards[0].city);
+
   return 0;
 }
