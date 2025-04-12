@@ -211,5 +211,79 @@ int main() {
       printf("Opção inválida\n");
   }
 
+  int selectedAttribute2;
+  printf("\nEscolha um atributo para comparação:\n");
+  if(selectedAttribute != 1)
+    printf("1. População\n");
+  if(selectedAttribute != 2)
+    printf("2. Área\n");
+  if(selectedAttribute != 3)
+    printf("3. PIB\n");
+  if(selectedAttribute != 4)
+    printf("4. Número de pontos turísticos\n");
+  if(selectedAttribute != 5)
+    printf("5. Densidade demográfica\n");
+  scanf("%d", &selectedAttribute2);
+
+  switch (selectedAttribute2) {
+    case 1:        
+      printf("\n--- Comparação de Cartas (Atributo: População): ---\n");
+      printf("Carta 1 - %s: %lu\n", cards[0].city, cards[0].population);
+      printf("Carta 2 - %s: %lu\n", cards[1].city, cards[1].population);
+      if(first_card_win_population == -1) {
+        printf("Resultado: Empate!");
+        break;
+      }
+      winnerCardIndex = ((first_card_win_population == 0) ? 1 : 0);
+      printf("Resultado: Carta %d (%s) venceu! \n", ((first_card_win_population == 0) ? 2 : 1), cards[winnerCardIndex].city);
+      break;
+    case 2:
+      printf("\n--- Comparação de Cartas (Atributo: Área): ---\n");
+      printf("Carta 1 - %s: %2f\n", cards[0].city, cards[0].area_in_square_kilometers);
+      printf("Carta 2 - %s: %2f\n", cards[1].city, cards[1].area_in_square_kilometers);
+      if(first_card_win_area == -1) {
+        printf("Resultado: Empate!");
+        break;
+      }
+      winnerCardIndex = ((first_card_win_area == 0) ? 1 : 0);
+      printf("Resultado: Carta %d (%s) venceu! \n", ((first_card_win_area == 0) ? 2 : 1), cards[winnerCardIndex].city);
+      break;
+    case 3:
+      printf("\n--- Comparação de Cartas (Atributo: PIB): ---\n");
+      printf("Carta 1 - %s: %2f\n", cards[0].city, cards[0].pib);
+      printf("Carta 2 - %s: %2f\n", cards[1].city, cards[1].pib);
+      if(first_card_win_pib == -1) {
+        printf("Resultado: Empate!");
+        break;
+      }
+      winnerCardIndex = ((first_card_win_pib == 0) ? 1 : 0);
+      printf("Resultado: Carta %d (%s) venceu! \n", ((first_card_win_pib == 0) ? 2 : 1), cards[winnerCardIndex].city);
+      break;
+    case 4:
+      printf("\n--- Comparação de Cartas (Atributo: Número de pontos turísticos): ---\n");
+      printf("Carta 1 - %s: %d\n", cards[0].city, cards[0].number_tourist_attractions);
+      printf("Carta 2 - %s: %d\n", cards[1].city, cards[1].number_tourist_attractions);
+      if(first_card_win_number_tourist_attractions == -1) {
+        printf("Resultado: Empate!");
+        break;
+      }
+      winnerCardIndex = ((first_card_win_number_tourist_attractions == 0) ? 1 : 0);
+      printf("Resultado: Carta %d (%s) venceu! \n", ((first_card_win_number_tourist_attractions == 0) ? 2 : 1), cards[winnerCardIndex].city);
+      break;
+    case 5:
+      printf("\n--- Comparação de Cartas (Atributo: Densidade demográfica): ---\n");
+      printf("Carta 1 - %s: %2f\n", cards[0].city, cards[0].population_density);
+      printf("Carta 2 - %s: %2f\n", cards[1].city, cards[1].population_density);
+      if(first_card_win_population_density == -1) {
+        printf("Resultado: Empate!");
+        break;
+      }
+      winnerCardIndex = ((first_card_win_population_density == 0) ? 1 : 0);
+      printf("Resultado: Carta %d (%s) venceu! \n", ((first_card_win_population_density == 0) ? 2 : 1), cards[winnerCardIndex].city);
+      break;
+    default:
+      printf("Opção inválida\n");
+  }
+
   return 0;
 }
