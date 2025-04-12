@@ -7,3 +7,4 @@
 *.so       # Bibliotecas compartilhadas no Linux
 *.dll      # Bibliotecas dinâmicas no Windows
 *.dSYM/    # Diretórios de debug do macOS
+super_trunfo
